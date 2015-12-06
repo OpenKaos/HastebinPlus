@@ -1,6 +1,10 @@
 ///// represents the paste application
 var haste = function () {
-	this.appName = "Hastebin Plus";
+        this.sitename = "ProyectosWeb";
+        if (document.URL.match(/worldthemusic/i)) {
+                this.sitename = "WorldTheMusic";
+        }
+	this.appName = this.sitename + " Paste";
 	this.twitter = true;
 	this.$textarea = $('textarea');
 	this.$box = $('#code');
@@ -12,7 +16,7 @@ var haste = function () {
 		$('#tools .twitter').hide();
 	}
 
-	this.defaultText = "Welcome to " + this.appName + "!";
+	this.defaultText = "Bienvenido a " + this.appName + "!";
 };
 
 // Set the page title - include the appName
